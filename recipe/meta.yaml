@@ -1,5 +1,5 @@
 {% set name = "pygeoops" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9d9dc92698b8fcf031eed540fb3b69646d023014a24f93bc9548e05846628a7
+  sha256: 0e319e7fa54a1c470067f38821d5b12c27c8d6ae0b6e96c3fe6a59547e2c5b02
 
 build:
   number: 0
@@ -20,7 +20,9 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - geopandas-base
     - shapely >1
+    - topojson
 
 test:
   imports:
