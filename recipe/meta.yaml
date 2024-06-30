@@ -10,7 +10,7 @@ source:
   sha256: 300dcc52ec09718841b79086b3f1dcda514c2c0b25171af764c3be724f22dbf1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,6 +21,8 @@ requirements:
   run:
     - python >=3.8
     - geopandas-base >=0.12.1
+    - numpy
+    - pyproj
     - shapely >1
     - topojson
 
